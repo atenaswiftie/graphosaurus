@@ -65,13 +65,13 @@ var securityColor = function (security) {
 };
 
 graph = G.graph({
-  // nodeImage: "./disc.png",
-  // nodeImageTransparent: true,
+  nodeImage: "./disc.png",
+  nodeImageTransparent: true,
   antialias: true,
   bgColor: "",
   edgeWidth: 1.5,
   nodeSize: 5,
-  hover: function (node) { $("#label").text("Solar system: " + node.name); },
+  // hover: function (node) { $("#label").text("Solar system: " + node.name); },
 });
 
 
@@ -105,12 +105,12 @@ function generateRandomRelations(systems, numRelations) {
   return relations;
 }
 
-const numSystems = 400_000;
+const numSystems = 200_000;
 const numRelations = 1000;
 
 var eve = {
   systems: generateRandomSystems(numSystems),
-  relations: generateRandomRelations(generateRandomSystems(numSystems), numRelations)
+  // relations: generateRandomRelations(generateRandomSystems(numSystems), numRelations)
 };
 console.log(eve.systems.length)
 for (var i = 0; i < eve.systems.length; i++) {
